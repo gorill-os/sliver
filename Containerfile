@@ -10,6 +10,15 @@ RUN echo "sliver" > /etc/hostname
 
 # Install needed packages
 RUN pacman -Sy --noconfirm \
+        emacs-slime \
+        emacs \
+        ecl \
+        sbcl \
+        roswell \
+        quicklisp \
+        stumpwm \
+        stumpwm-contrib \
+        nyxt \
         chezmoi \
         fzf \
         github-cli \
@@ -18,6 +27,9 @@ RUN pacman -Sy --noconfirm \
         just \
         micro \
         racket \
+        fennel \
+        clojure \
+        leiningen \
         zsh 
 
 # Create build user
@@ -32,7 +44,10 @@ WORKDIR /home/build
 RUN paru -S --noconfirm \
         aur/visual-studio-code-bin \
         aur/chez-scheme \
-        aur/chibi-scheme
+        aur/chibi-scheme \
+        aur/gerbil-scheme \
+        aur/clasp-cl \
+        aur/abcl 
 USER root
 WORKDIR /
 
