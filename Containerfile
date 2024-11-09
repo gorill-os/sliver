@@ -45,7 +45,7 @@ RUN paru -S --noconfirm \
         aur/visual-studio-code-bin \
         aur/chez-scheme \
         aur/chibi-scheme \
-        aur/gerbil-scheme \
+        #aur/gerbil-scheme \
         aur/clasp-cl \
         aur/abcl 
 USER root
